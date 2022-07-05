@@ -44,9 +44,7 @@ const finalCountries =
   title +
   "\n" +
   sorted
-    .map(
-      (country) => Object.values(country).join(" | ").toString() + ";" + "\n"
-    )
+    .map((country) => Object.values(country).join(" | ") + ";" + "\n")
     .join("\n");
 
 fs.writeFileSync("countries.csv", finalCountries);
