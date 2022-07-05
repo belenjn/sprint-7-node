@@ -23,8 +23,8 @@ const countriesArray = countries
       .splice(0, country.length - 2)
       .join()
       .replace(/,/g, " ");
-    const population = parseInt(country[country.length - 2]?.replace(/,/g, ""));
-    const area = parseInt(country[country.length - 1]?.replace(/,/g, ""));
+    const population = parseInt(country[country.length - 2].replace(/,/g, ""));
+    const area = parseInt(country[country.length - 1].replace(/,/g, ""));
 
     const density = population / area;
 
@@ -40,11 +40,13 @@ const countriesArray = countries
 
 const sorted = countriesArray.sort((a, b) => a.density - b.density);
 
-const newArray =
+const finalCountries =
   title +
   "\n" +
   sorted
-    .map((country) => Object.values(country).join(" | ").toString() + "\n")
+    .map(
+      (country) => Object.values(country).join(" | ").toString() + ";" + "\n"
+    )
     .join("\n");
 
-fs.writeFileSync("countries.csv", newArray);
+fs.writeFileSync("countries.csv", finalCountries);
