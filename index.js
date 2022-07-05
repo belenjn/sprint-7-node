@@ -38,7 +38,7 @@ const countriesArray = countries
     return data;
   });
 
-const sorted = countriesArray.sort((a, b) => a.density - b.density);
+const sorted = countriesArray.sort((a, b) => b.density - a.density);
 
 const finalCountries =
   title +

@@ -72,7 +72,7 @@ Guinea 13,132,795 245,720
 Guinea-Bissau 1,968,001 28,120
 Guyana 786,552 196
 Haiti 11,402,528 27,560
-Holy See 825 0.49
+Holy See 825 0.49 44
 Honduras 9,904,607 111,890
 Hungary 9,660,351 90,530
 Iceland 341,243 100
